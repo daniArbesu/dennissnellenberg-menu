@@ -3,6 +3,7 @@ import styles from './style.module.css';
 import { useState } from 'react';
 import HamburgerMenu from '../HamburgerMenu';
 import NavBar from '../Navbar';
+import { AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -10,7 +11,7 @@ const Header = () => {
   return (
     <>
       <HamburgerMenu isActive={isActive} setIsActive={setIsActive} />
-      {isActive && <NavBar />}
+      <AnimatePresence>{isActive && <NavBar />}</AnimatePresence>
     </>
   );
 };
