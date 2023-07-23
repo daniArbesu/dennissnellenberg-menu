@@ -1,10 +1,11 @@
-'use client';
-import { useState } from 'react';
 import styles from './style.module.css';
 
-const HamburgerMenu = () => {
-  const [isActive, setIsActive] = useState(false);
+interface Props {
+  isActive: boolean;
+  setIsActive: (isActive: boolean) => void;
+}
 
+const HamburgerMenu: React.FC<Props> = ({ isActive, setIsActive }) => {
   return (
     <button className={styles.button} onClick={() => setIsActive(!isActive)}>
       <div
