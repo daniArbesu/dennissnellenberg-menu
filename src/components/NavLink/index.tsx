@@ -6,11 +6,12 @@ import { slide } from './animation';
 interface Props {
   title: string;
   href: string;
+  index: number;
 }
 
-const NavLink: React.FC<Props> = ({ title, href }) => {
+const NavLink: React.FC<Props> = ({ title, href, index }) => {
   return (
-    <motion.div variants={slide} initial="initial" animate="animate" exit="exit">
+    <motion.div custom={index} variants={slide} initial="initial" animate="animate" exit="exit">
       <Link className={styles.link} href={href}>
         {title}
       </Link>

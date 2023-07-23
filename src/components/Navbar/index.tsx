@@ -18,8 +18,8 @@ const NavBar = () => {
           <header className={styles.header}>
             <p>Navigation</p>
           </header>
-          {navLinks.map(({ title, href }) => (
-            <NavLink key={href} href={href} title={title} />
+          {navLinks.map(({ title, href }, index) => (
+            <NavLink key={href} href={href} title={title} index={index} />
           ))}
         </nav>
       </div>
