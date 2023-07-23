@@ -3,8 +3,8 @@
   top: 0;
   right: 0;
   height: 100svh;
-  background-color: #292929;
-  color: white;
+  background-color: var(--color-dark);
+  color: var(--color-white);
 }
 
 .body {
@@ -23,7 +23,8 @@
 }
 
 .header {
-  color: #999;
+  color: var(--color-white);
+  opacity: 0.5;
   border-bottom: 1px solid #999;
   padding-bottom: 20px;
   text-transform: uppercase;

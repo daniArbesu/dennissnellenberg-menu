@@ -1,9 +1,16 @@
-const initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q-100 ${
-  window.innerHeight / 2
-} 100 0`;
-const finalPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q100 ${
-  window.innerHeight / 2
-} 100 0`;
+// Fix serverside error calling window
+const isClientSide = typeof window !== 'undefined';
+
+const initialPath = isClientSide
+  ? `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q-100 ${
+      window.innerHeight / 2
+    } 100 0`
+  : '';
+const finalPath = isClientSide
+  ? `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q100 ${
+      window.innerHeight / 2
+    } 100 0`
+  : '';
 
 export const pathAnimation = {
   initial: {
