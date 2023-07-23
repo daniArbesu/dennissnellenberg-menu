@@ -3,6 +3,7 @@ import styles from './style.module.css';
 import NavLink from '../NavLink';
 import { motion } from 'framer-motion';
 import { menuSlide } from './animation';
+import SVGMask from '../SVGMask';
 
 const NavBar = () => {
   return (
@@ -23,6 +24,7 @@ const NavBar = () => {
           ))}
         </nav>
       </div>
+      <SVGMask />
     </motion.section>
   );
 };
