@@ -1,15 +1,8 @@
-'use client';
-import { useState } from 'react';
 import styles from './style.module.css';
+import HamburgerMenu from '../HamburgerMenu';
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  return (
-    <div className={styles.button}>
-      <div className={styles.hamburger}></div>
-    </div>
-  );
+  return <HamburgerMenu />;
 };
 
 export default Header;
