@@ -5,7 +5,11 @@ import styles from './style.module.css';
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
 
-  return <div>Header</div>;
+  return (
+    <div className={styles.button}>
+      <div className={styles.hamburger}></div>
+    </div>
+  );
 };
 
 export default Header;
